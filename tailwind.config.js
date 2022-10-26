@@ -8,9 +8,25 @@ module.exports = {
   theme: {
     extend: {
       backgroundColor: ['active'],
+      backgroundImage:{
+        backimg:"url(Back/images/bg-logo.svg)"
+      },
+      keyframes: {
+        cursor: {
+          '0%': {
+            opacity: 1
+          },
+          '100%': {
+            opacity: 0
+          }
+        }
+      },
+      animation: {
+        'cursor': 'cursor 1s steps(2, jump-none) infinite'
+      }
     },
   },
-  plugins: [require("daisyui"),require('tailwind-scrollbar')],
+  plugins: [require("daisyui"), require('tailwind-scrollbar')],
 
   // daisyUI config (optional)
   daisyui: {
@@ -22,6 +38,7 @@ module.exports = {
     rtl: false,
     prefix: "",
     darkTheme: "dark",
-    themes: ["light", "dark", "cupcake", "bumblebee", "emerald", "corporate", "synthwave", "retro", "cyberpunk", "valentine", "halloween", "garden", "forest", "aqua", "lofi", "pastel", "fantasy", "wireframe", "black", "luxury", "dracula", "cmyk", "autumn", "business", "acid", "lemonade", "night", "coffee", "winter"],
+    themes: ["light"],
   },
 }
+

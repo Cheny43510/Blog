@@ -1,9 +1,10 @@
 <template>
     <div class="h-screen">
-        <div class="svg">
+        <div class="bg-backimg w-full h-full">
             <div class="flex flex-col space-y-8 justify-center items-center h-full">
                 <h1 class="text-6xl font-serif ">{{persin}}</h1>
-                <div class="word w-100px  whitespace-nowrap overflow-hidden font-mono text-6xl">{{ text }}</div>
+                <div class="after:animate-cursor whitespace-nowrap overflow-hidden font-mono text-6xl
+                after:inline-block after:w-3 after:ml-3 after:h-16 after:align-bottom after:bg-black">{{ text }}</div>
             </div>
         </div>
     </div>
@@ -33,54 +34,10 @@ export default {
     mounted() {
         setInterval(() => {
             this.autoTyping()
-        }, 350)
+        }, 400)
     }
 }
 </script>
 
 <style>
-.svg {
-    width: 100%;
-    height: 100%;
-    background-image: url("./images/bg-logo.svg");
-}
-
-.word {
-    width: 28ch;
-    animation: typin 2.5s forwards;
-    animation-iteration-count: infinite;
-    animation-direction: alternate-reverse;
-}
-
-.word::after {
-    content: '';
-    display: inline-block;
-    /* position: absolute; */
-    width: 10px;
-    margin-left: 12px;
-    height: 4rem;
-    /* line-height: 16px; */
-    vertical-align: bottom;
-    background-color: #000;
-    /* border-radius: 10px; */
-    animation: cursor 1s steps(2, jump-none) infinite;
-}
-
-@keyframes cursor {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes typing {
-    0% {}
-
-    to {
-        width: 28ch;
-    }
-}
 </style>
