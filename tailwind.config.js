@@ -5,11 +5,30 @@ module.exports = {
     './src/**/*.html',
     './src/**/*.vue'
   ],
+  variants:{
+    extend:{
+      borderWidth: {
+        '50px':{
+          width: '50px'
+        }
+      }
+    }
+  },
   theme: {
     extend: {
+      height:{
+        '108':'38rem'
+      },
+      rotate:{
+        '-25':'-25deg'
+      },
+      margin:{
+        '26':'6.5rem',
+      },
       backgroundColor: ['active'],
       backgroundImage:{
-        backimg:"url(Back/images/bg-logo.svg)"
+        backimg:"url(Back/images/bg-logo.svg)",
+        sticky:'url(Show/images/sticky.svg)'
       },
       keyframes: {
         cursor: {

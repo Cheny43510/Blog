@@ -6,4 +6,7 @@
     .nav-border {
         @apply  hover:text-green-500  hover:border-b-4 hover:border-b-green-500;
     }
+    .beforesticky {
+        @apply before:absolute  before:w-12 before:h-12 before:inline-block before:bg-sticky  before:left-0
+    } 
 }

@@ -1,15 +1,17 @@
 <template>
     <div>
         <Back />
+        <Show />
     </div>
 </template>
 
 <script>
 import Back from './Back'
+import Show from './Show'
 export default {
     name: '',
     components:{
-        Back
+        Back,Show
     },
     mounted(){
         console.log('首页');

@@ -17,11 +17,11 @@ export default {
 
 <style>
 ::-webkit-scrollbar {
-	width: 8px;
-	height: 10px;
+	width: 4px;
+	height: 5px;
 }
 ::-webkit-scrollbar-thumb {
-	background-color: rgba(0, 255, 30, 0.745);
+	background-color: rgba(38, 255, 0, 0.777);
 	border-radius: 6px;
 	cursor: pointer;
 }
